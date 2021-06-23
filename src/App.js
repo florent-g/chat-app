@@ -1,4 +1,5 @@
 import './App.css';
+import Login from './Login';
 import Sidebar from './Sidebar';
 import Chat from './Chat';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -9,7 +10,7 @@ function App() {
   return (
     <div className='app'>
       {!user ? (
-        <h1>Login</h1>
+        <Login />
       ) : (
         <div className='app__body'>
           <Router>
