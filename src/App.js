@@ -3,10 +3,10 @@ import Login from './Login';
 import Sidebar from './Sidebar';
 import Chat from './Chat';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useStateValue } from './StateProvider';
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [{ user }, dispatch] = useStateValue();
   return (
     <div className='app'>
       {!user ? (
